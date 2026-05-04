@@ -1,0 +1,86 @@
+{
+  "level": 2,
+  "title": "Everyday Tenses Mix",
+  "description": "A starter set mixing present, past, and future forms.",
+  "total_questions": 6,
+  "questions": [
+    {
+      "id": 1,
+      "tense": "Present Simple",
+      "question": "She ____ coffee every morning.",
+      "choices": ["drink", "drinks", "drank", "is drinking"],
+      "correct_answer": "drinks",
+      "wrong_answer_notes": {
+        "drink": "Third-person singular needs an -s ending.",
+        "drank": "This is past simple, not present.",
+        "is drinking": "Present continuous is not used for habits."
+      },
+      "question_note": "Use present simple for routines."
+    },
+    {
+      "id": 2,
+      "tense": "Past Simple",
+      "question": "They ____ to the museum yesterday.",
+      "choices": ["go", "went", "gone", "are going"],
+      "correct_answer": "went",
+      "wrong_answer_notes": {
+        "go": "Past simple needs the past form.",
+        "gone": "Past participle is used with have/has.",
+        "are going": "Present continuous does not match past time marker."
+      },
+      "question_note": "Yesterday signals past simple."
+    },
+    {
+      "id": 3,
+      "tense": "Future (will)",
+      "question": "I think it ____ rain tonight.",
+      "choices": ["will", "is", "was", "had"],
+      "correct_answer": "will",
+      "wrong_answer_notes": {
+        "is": "Use will for predictions.",
+        "was": "Past tense does not fit future prediction.",
+        "had": "Past perfect is unrelated here."
+      },
+      "question_note": "Predictions often use will."
+    },
+    {
+      "id": 4,
+      "tense": "Present Continuous",
+      "question": "Look! The kids ____ outside.",
+      "choices": ["play", "plays", "are playing", "played"],
+      "correct_answer": "are playing",
+      "wrong_answer_notes": {
+        "play": "Present continuous needs am/is/are + -ing.",
+        "plays": "Third-person singular is not correct for plural subject.",
+        "played": "Past simple does not match the current action."
+      },
+      "question_note": "Use present continuous for actions happening now."
+    },
+    {
+      "id": 5,
+      "tense": "Present Perfect",
+      "question": "We ____ finished the project already.",
+      "choices": ["have", "has", "had", "were"],
+      "correct_answer": "have",
+      "wrong_answer_notes": {
+        "has": "Use have with we.",
+        "had": "Past perfect needs a past reference point.",
+        "were": "This is a past form of be, not an auxiliary."
+      },
+      "question_note": "Use have with plural subjects."
+    },
+    {
+      "id": 6,
+      "tense": "Past Perfect",
+      "question": "By the time she arrived, we ____ eaten.",
+      "choices": ["have", "had", "has", "are"],
+      "correct_answer": "had",
+      "wrong_answer_notes": {
+        "have": "Past perfect uses had for all subjects.",
+        "has": "Has is present perfect, not past perfect.",
+        "are": "This is present tense."
+      },
+      "question_note": "Past perfect shows an earlier past action."
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: local("Space Grotesk"), local("SpaceGrotesk");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: local("Fraunces"), local("Fraunces 9pt"), local("Fraunces 144pt");
+  font-display: swap;
+}
+
+:root {
+  --font-sans: "Space Grotesk", "Avenir Next", "Trebuchet MS", sans-serif;
+  --font-display: "Fraunces", "Georgia", serif;
+
+  --bg-base: #f4efe7;
+  --surface: #ffffff;
+  --surface-strong: #fff6e9;
+  --text-main: #1c1a19;
+  --text-muted: #5d564f;
+  --brand: #0f8b8d;
+  --brand-strong: #0a6f71;
+  --accent: #f28b30;
+  --accent-strong: #d8631a;
+  --danger: #e15554;
+  --success: #2f9e44;
+  --brand-soft: rgba(15, 139, 141, 0.12);
+  --accent-soft: rgba(242, 139, 48, 0.16);
+  --danger-soft: rgba(225, 85, 84, 0.16);
+  --success-soft: rgba(47, 158, 68, 0.16);
+  --shadow-soft: 0 20px 60px rgba(16, 16, 16, 0.12);
+  --shadow-card: 0 12px 36px rgba(20, 18, 16, 0.12);
+  --ring: 0 0 0 3px rgba(15, 139, 141, 0.22);
+}
+
+html.dark {
+  --bg-base: #111018;
+  --surface: #1a1a24;
+  --surface-strong: #222131;
+  --text-main: #f4f1ec;
+  --text-muted: #c3bdb5;
+  --brand: #47b1ad;
+  --brand-strong: #2d8f8d;
+  --accent: #f2a74b;
+  --accent-strong: #dd7b2d;
+  --danger: #f17877;
+  --success: #64c27b;
+  --brand-soft: rgba(71, 177, 173, 0.18);
+  --accent-soft: rgba(242, 167, 75, 0.2);
+  --danger-soft: rgba(241, 120, 119, 0.18);
+  --success-soft: rgba(100, 194, 123, 0.18);
+  --shadow-soft: 0 26px 70px rgba(0, 0, 0, 0.45);
+  --shadow-card: 0 18px 40px rgba(0, 0, 0, 0.35);
+  --ring: 0 0 0 3px rgba(71, 177, 173, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  background: var(--bg-base);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto;
+  width: 520px;
+  height: 520px;
+  border-radius: 999px;
+  filter: blur(60px);
+  opacity: 0.25;
+  z-index: -1;
+  animation: float 16s ease-in-out infinite;
+}
+
+body::before {
+  top: -200px;
+  left: -120px;
+  background: radial-gradient(circle, rgba(15, 139, 141, 0.7), transparent 65%);
+}
+
+body::after {
+  bottom: -220px;
+  right: -120px;
+  background: radial-gradient(circle, rgba(242, 139, 48, 0.65), transparent 65%);
+  animation-delay: 4s;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+@keyframes float {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(20px, -18px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: color-mix(in srgb, var(--surface) 85%, transparent);
+    border: 1px solid color-mix(in srgb, var(--text-main) 12%, transparent);
+    box-shadow: var(--shadow-card);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
